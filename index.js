@@ -7,9 +7,9 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-//process.env.MODE === "development" ? process.env.CLIENT_URL_LOCAL : process.env.CLIENT_URL_PROD
+
 // Middleware
-app.use(cors({ origin: ["http://localhost:3000"], credentials: true }));
+app.use(cors({ origin: ["https://grocery-x.vercel.app"], credentials: true }));
 app.use(express.json());
 
 // MongoDB Connection URL
