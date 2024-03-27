@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({ origin: ["https://grocery-x.vercel.app"], credentials: true }));
+app.use(cors({ origin: ["http://localhost:3000", "https://grocery-x-server.vercel.app"] }));
 app.use(express.json());
 
 // MongoDB Connection URL
@@ -58,7 +58,7 @@ run().catch(console.dir);
 
 app.get('/', (req, res) => {
     const serverStatus = {
-        message: 'Server is running smoothly',
+        message: 'Server is running smoothly as expected',
         timestamp: new Date()
     };
     res.json(serverStatus);
